@@ -32,9 +32,7 @@ Fin
         $resultado = (int)($n / 2);
         echo $resultado;
 
-        echo 
-
-        for ($n = floor($n  / 2); $i <= 2; $i--) {
+        for ($i = floor($n  / 2); $i <= 2; $i--) {
 
             if (($n % $i) == 0) {
 
