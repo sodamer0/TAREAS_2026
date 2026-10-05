@@ -1,4 +1,4 @@
-/*
+<!--
 4. Tabla de multiplicar
 
 Dado un número entero entre 1 y 10, crear un array asociativo que contenga su tabla
@@ -20,7 +20,7 @@ Finalmente, recorrer el array y mostrar cada clave junto con su resultado.
 Pista: puede utilizarse un bucle for y la sintaxis avanzada de interpolación en PHP de
  variables para construir las claves.
 
-*/
+-->
 
 <?php 
 
@@ -28,10 +28,20 @@ Pista: puede utilizarse un bucle for y la sintaxis avanzada de interpolación en
     fscanf(STDIN, "%d", $n);
 
 
-    $tabla = range (0, $n);
+    $tabla = [];
 
-    
+    for($i = 0; $i <= 10; $i++) {
+        //$tabla[$i] . " x " . $n . " = ". ($n * $i);
+
+        $tabla["{$n}x$i"] = $n*$i;
+
+    }
 
 
+    //print_r($tabla);
+    foreach ($tabla as $key => $value) {
 
+        echo "$key => $value\n";
+        //Buscar como jusficar por la derecha
+    }
 ?>
