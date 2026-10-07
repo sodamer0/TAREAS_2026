@@ -1,0 +1,13 @@
+cat > index.html <<'EOF'
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8">
+    <title>Servidor Ubuntu</title>
+</head>
+<body>
+    <h1>Servidor Ubuntu funcionando</h1>
+    <p>Esta páxina foi servida desde userver-maria.</p>
+</body>
+</html>
+EOF

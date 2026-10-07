@@ -44,16 +44,43 @@
 
     <?php
 
-    if (isset($_POST["alergenos"])) {
-        foreach ($_POST["alergenos"] as $alergeno) {
-            echo $alergeno . "<br>";
+        if (isset($_POST["hora"])) {
+            foreach ($_POST as $key => $value) {
+                if (is_array($value)) {
+                    $value_string = implode (", ", $value);
+                    echo "<p>Clave: " $key => Valor: htmlspecialchars($value)." </p>";
+                } else {
+                    echo "<p>Clase: " $key => Valor: htmlspecialchars($value)." </p>";
+                }
+            }
         }
-    }
 
-    if (isset($POST["ubicacion"])) {
-        $ubicacion = $_POST["ubicacion"];
-        echo "<p> El ubicacion seleccionada es <span>$ubicacion<s/span></p>";
-    }
+        if (isset($POST["fecha"])) {
+            echo "<p> La fecha es: " . htmlspecialchars($_POST['fecha'])." </p>";
+            
+        }
+
+        if (isset($POST["hora"])) {
+            echo "<p> La hora es: " . htmlspecialchars($_POST['hora'])." </p>";
+            
+        }
+
+        if (isset($POST["ubicacion"])) {
+            echo "<p> La ubicación es: " . htmlspecialchars($_POST['ubicacion'])." </p>";
+            
+        }
+
+        if (isset($_POST["alergenos"])) {
+            //$alergenosString = implode(", ",  $_POST["alergenos"]);
+            echo "<ul>";
+            var_dump($_POST["alergenos"]);
+            foreach ($_POST["alergenos"] as $alergeno) {
+                //var_dump($alergeno);
+                echo "<li>$alergeno</li>";
+            }
+        }
+
+
 
     ?>
 
